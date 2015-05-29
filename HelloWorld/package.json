@@ -1,0 +1,15 @@
+{
+  "name": "HelloWorldApp",
+  "version": "0.1.0",
+  "description": "A simple test application written using express.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/LesterThomas/helloworld.git"
+  },
+  "dependencies": {
+    "express": "^4.12.3"
+  },
+  "engines": {
+    "node": ">=0.10.0"
+  }
+}
