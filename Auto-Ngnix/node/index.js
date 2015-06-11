@@ -20,6 +20,9 @@ client.incr('serverCounter', function(err, serverCounter) {
 	thisServer=serverCounter;
 });
 
+app.use('/public',express.static('/src/public'));
+
+
 
 app.get('/', function(req, res, next) {
   client.incr('counter', function(err, counter) {

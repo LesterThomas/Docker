@@ -20,12 +20,15 @@ client.incr('serverCounter', function(err, serverCounter) {
 	thisServer=serverCounter;
 });
 
+app.use('/public',express.static('public'));
+
+
 
 app.get('/', function(req, res, next) {
   client.incr('counter', function(err, counter) {
     if(err) return next(err);
     console.log('HTTP Request returning ' + counter);
-    res.send('This page has been viewed ' + counter + ' times!  (Server:'+thisServer+' '+process.env.HOSTNAME+')');
+    res.send('This page has been viewed ' + counter + ' times!  (Server:'+thisServer+', Container:'+process.env.HOSTNAME+')');
   });
 });
 

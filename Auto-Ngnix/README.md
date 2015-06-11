@@ -17,7 +17,7 @@ Start Nginx reverse-proxy
 -------------------------
 
 ```
-docker run -d -p 80:80 -v /var/run/docker.sock:/tmp/docker.sock -t jwilder/nginx-proxy
+docker run -d -p 80:80 -v /var/run/docker.sock:/tmp/docker.sock  -t jwilder/nginx-proxy
 ```
 
 Start Redis
@@ -34,7 +34,7 @@ Start N x Application nodes
 To notify the Docker-Gen module that this node should be added to the load-balanced traffic, simply supply a `VIRTUAL_HOST` environment variable with the ip address or domain name of the server.
 
 ```
-docker run -d -name node8 -e VIRTUAL_HOST=192.168.1.106 --link redis:redis lesterthomas/nodecounterauto
+docker run -d -e VIRTUAL_HOST=192.168.1.106 -v /home/lester/Documents/Docker/Auto-Ngnix/node/public:/src/public --link redis:redis lesterthomas/appserver:1.0
 ```
 
 
