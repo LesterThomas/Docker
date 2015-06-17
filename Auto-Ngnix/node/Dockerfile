@@ -18,6 +18,9 @@ ADD package.json /tmp/package.json
 RUN cd /tmp && npm install
 RUN mkdir -p /src && cp -a /tmp/node_modules /src/
 
+# Define environment variable (this is the hostname that will be added to the Nginx configuration)
+ENV VIRTUAL_HOST=localhost
+
 # Define working directory
 WORKDIR /src
 ADD . /src
@@ -27,3 +30,7 @@ EXPOSE  80
 
 # Run app using nodemon
 CMD ["nodemon", "/src/index.js"]
+
+
+
+
