@@ -34,7 +34,7 @@ Start N x Application nodes
 To notify the Docker-Gen module that this node should be added to the load-balanced traffic, simply supply a `VIRTUAL_HOST` environment variable with the ip address or domain name of the server.
 
 ```
-docker run -d -e VIRTUAL_HOST=192.168.1.106 -v /home/lester/Documents/Docker/Auto-Ngnix/node/public:/src/public --link redis:redis lesterthomas/appserver:1.0
+docker run -d  -v /home/lester/Documents/Docker/Auto-Ngnix/node/public:/src/public --link redis:redis lesterthomas/appserver:1.0
 ```
 
 

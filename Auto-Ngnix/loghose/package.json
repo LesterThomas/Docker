@@ -1,0 +1,65 @@
+{
+  "name": "docker-loghose",
+  "version": "0.6.0",
+  "description": "Collect all the logs from all docker containers",
+  "main": "loghose.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "./loghose.js"
+  },
+  "bin": {
+    "docker-loghose": "loghose.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mcollina/docker-loghose.git"
+  },
+  "keywords": [
+    "docker",
+    "log",
+    "logs",
+    "collect"
+  ],
+  "author": {
+    "name": "Matteo Collina",
+    "email": "hello@matteocollina.com"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mcollina/docker-loghose/issues"
+  },
+  "homepage": "https://github.com/mcollina/docker-loghose",
+  "dependencies": {
+    "bl": "^0.9.4",
+    "docker-allcontainers": "^0.4.0",
+    "express": "^4.12.4",
+    "http": "0.0.0",
+    "minimist": "^1.1.1",
+    "never-ending-stream": "^1.1.2",
+    "pump": "^1.0.0",
+    "through2": "^0.6.5"
+  },
+  "gitHead": "701e32a09ea24923f15804b929560bab51a53364",
+  "_id": "docker-loghose@0.6.0",
+  "_shasum": "ef0bac36dfdc0067222eaecba5a390b612d52583",
+  "_from": "docker-loghose@*",
+  "_npmVersion": "2.11.1",
+  "_nodeVersion": "0.10.36",
+  "_npmUser": {
+    "name": "matteo.collina",
+    "email": "hello@matteocollina.com"
+  },
+  "maintainers": [
+    {
+      "name": "matteo.collina",
+      "email": "hello@matteocollina.com"
+    }
+  ],
+  "dist": {
+    "shasum": "ef0bac36dfdc0067222eaecba5a390b612d52583",
+    "tarball": "http://registry.npmjs.org/docker-loghose/-/docker-loghose-0.6.0.tgz"
+  },
+  "directories": {},
+  "_resolved": "https://registry.npmjs.org/docker-loghose/-/docker-loghose-0.6.0.tgz",
+  "readme": "ERROR: No README data found!"
+}

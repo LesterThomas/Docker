@@ -20,18 +20,26 @@ client.incr('serverCounter', function(err, serverCounter) {
 	thisServer=serverCounter;
 });
 
-app.use('/public',express.static('public'));
+app.use('/public',express.static('/src/public'));
 
 
 
 app.get('/', function(req, res, next) {
-  client.incr('counter', function(err, counter) {
-    if(err) return next(err);
-    console.log('HTTP Request returning ' + counter);
-    res.send('This page has been viewed ' + counter + ' times!  (Server:'+thisServer+', Container:'+process.env.HOSTNAME+')');
-  });
+    client.incr('counter', function(err, counter) {
+        if(err) return next(err);
+        //var latencyStart=Date.Now();
+        console.log('HTTP Request returning ' + counter);
+        /*var i=0;
+        var j=0;
+        for (i=0;i<10000;i++){ //delay to create some latency
+        	j=i;
+        }*/
+
+        res.send('This page has been viewed ' + counter + ' times!  (Server:'+thisServer+', Container:'+process.env.HOSTNAME+')');
+    });
 });
 
+
 http.createServer(app).listen(process.env.PORT || 80, function() {
-  console.log('Listening on port ' + (process.env.PORT || 80));
+    console.log('Listening on port ' + (process.env.PORT || 80));
 });
