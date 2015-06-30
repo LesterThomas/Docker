@@ -38,3 +38,16 @@ docker run -d  -v /home/lester/Documents/Docker/Auto-Ngnix/node/public:/src/publ
 ```
 
 
+
+
+
+Load tests
+----------
+
+using CURL:
+for i in `seq 1 20000`; do curl http://localhost; echo '\n'; done
+
+Using Apache:
+ab -n 2000 -c 10 http://localhost/
+
+

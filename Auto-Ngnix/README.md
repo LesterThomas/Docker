@@ -17,14 +17,14 @@ Start Nginx reverse-proxy
 -------------------------
 
 ```
-docker run -d -p 80:80 -v /var/run/docker.sock:/tmp/docker.sock  -t jwilder/nginx-proxy
+docker run -d --restart="always" -p 80:80 -v /var/run/docker.sock:/tmp/docker.sock  -t lesterthomas/nginx
 ```
 
 Start Redis
 -----------
 
 ```
-docker run -d --name redis -p 6379:6379 redis
+docker run -d --restart="always" --name redis -p 6379:6379 redis
 ```
 
 

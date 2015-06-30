@@ -36,11 +36,9 @@ app.get('/', function(req, res, next) {
     console.log('HTTP Request returning ' + counter);
     var latencyStart=Date.now();
     var timeTaken=0;
-        while (timeTaken<10){ //delay to create some latency
+        while (timeTaken<40){ //delay to create some latency (v1.0 should be 20; v1.1 should be 40; v1.2 should be 10)
           //do nothing!
             timeTaken=Date.now()-latencyStart;
-            
-
         }
     res.send('This page has been viewed ' + counter + ' times!  (Server:'+thisServer+', Container:'+process.env.HOSTNAME+', Version: 1.1)');
   });

@@ -37,6 +37,7 @@
     "minimist": "^1.1.1",
     "never-ending-stream": "^1.1.2",
     "pump": "^1.0.0",
+    "split2": "^0.2.1",
     "through2": "^0.6.5"
   },
   "gitHead": "701e32a09ea24923f15804b929560bab51a53364",

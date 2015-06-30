@@ -2,7 +2,7 @@
 FROM    ubuntu
 
 # File Author / Maintainer
-MAINTAINER Anand Mani Sankar
+MAINTAINER Lester Thomas
 
 # Install Node.js and other dependencies
 RUN apt-get update && \
@@ -27,7 +27,7 @@ ADD . /src
 EXPOSE  80
 
 # Run app using nodemon
-CMD ["nodemon", "/src/index.js"]
+CMD ["node", "/src/index.js"]
 
 
 
