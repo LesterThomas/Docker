@@ -3,7 +3,7 @@ Automated configuration of NGiNX to load-balance across an unspecified number of
 
 This example shows how to automatically create the Nginx configuration to load-balance across a number of application containers.
 
-The work here is based on an excellent blog post from [![Jason Wilder](http://jasonwilder.com/blog/2014/03/25/automated-nginx-reverse-proxy-for-docker/)] and uses his [![Docker-Gen](https://github.com/jwilder/docker-gen)] module to update the Nginx configuration.
+The work here is based on an excellent blog post from [Jason Wilder](http://jasonwilder.com/blog/2014/03/25/automated-nginx-reverse-proxy-for-docker/) and uses his [Docker-Gen](https://github.com/jwilder/docker-gen) module to update the Nginx configuration.
 
 
 The example has:
