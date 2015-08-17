@@ -8,11 +8,10 @@ HelloWorld
 Very simple first build of a Docker Container
 
 
-
-Nginx-Docker-Compose
+Static-Nginx
 --------------------
 
-Load balanced web server with Nginx, Nodejs and Redis containers
+Load balanced web server with Nginx, Nodejs and Redis containers built using Docker compose. This has a static architecture (i.e. pre-defined number of containers).
 
 
 Auto-Nginx
