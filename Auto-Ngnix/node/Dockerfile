@@ -25,6 +25,8 @@ ENV VIRTUAL_HOST=localhost
 WORKDIR /src
 ADD . /src
 
+VOLUME /home/lester/Documents/Docker/Auto-Ngnix/node/public:/src/public
+
 # Expose port
 EXPOSE  80
 

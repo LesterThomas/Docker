@@ -45,9 +45,9 @@ Load tests
 ----------
 
 using CURL:
-for i in `seq 1 20000`; do curl http://localhost; echo '\n'; done
+for i in `seq 1 10`; do curl http://localhost; echo '\n'; done
 
 Using Apache:
-ab -n 2000 -c 10 http://localhost/
+ab -n 200000 -c 10 http://localhost/
 
 
