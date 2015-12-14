@@ -28,13 +28,13 @@ docker run -d --restart="always" --name redis -p 6379:6379 redis
 ```
 
 
-Start N x Application nodes
+Start N x Application nodes 
 ---------------------------
 
 To notify the Docker-Gen module that this node should be added to the load-balanced traffic, simply supply a `VIRTUAL_HOST` environment variable with the ip address or domain name of the server.
 
 ```
-docker run -d  -v /home/lester/Documents/Docker/Auto-Ngnix/node/public:/src/public --link redis:redis lesterthomas/appserver:1.0
+docker run -d -VIRTUAL_HOST=xxx.xxx.xxx.xxx -v /home/lester/Documents/Docker/Auto-Ngnix/node/public:/src/public --link redis:redis lesterthomas/appserver:1.0
 ```
 
 
