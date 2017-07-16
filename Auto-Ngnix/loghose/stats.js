@@ -31,6 +31,8 @@ function stats(opts) {
   return result;
 
   function detachContainer(id) {
+    console.log('Detatching from ' + id);
+
     if (streams[id]) {
       streams[id].destroy();
       delete streams[id];
@@ -41,13 +43,15 @@ function stats(opts) {
     // we are trying to tap into this container
     // we should not do that, or we might be stuck in
     // an output loop
+    console.log('Attaching to  ' + data.id);
+ 
     if (data.id.indexOf(process.env.HOSTNAME) === 0) {
       return;
     }
 
     var stream = nes(container.stats.bind(container));
 
-    streams[data.Id] = stream;
+    streams[data.id] = stream;
 
     var previousSystem = 0;
     var previousCpu = 0;
